@@ -8,7 +8,7 @@ Currently only very simple regular expressions are supported.
 __Supported stuff__
 * Bracket expressions (e.g. "[A-z]", "[a-z]", [asjfh.,], "[0-9]", etc.)
 * Character literals (e.g. "hello"; although somewhat useless on its own ;)
-* Cardinality expressions (e.g. "[abc]{1,3}"
+* Cardinality expressions (e.g. "[abc]{1,3}")
 
 Known Bugs
 ----------
