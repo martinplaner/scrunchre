@@ -9,6 +9,7 @@ __Supported stuff__
 * Bracket expressions (e.g. "[A-z]", "[a-z]", [asjfh.,], "[0-9]", etc.)
 * Character literals (e.g. "hello"; although somewhat useless on its own ;)
 * Cardinality expressions (e.g. "[abc]{1,3}")
+* Options (e.g. "ab?", "a[bc]?")
 
 Known Bugs
 ----------
@@ -20,6 +21,13 @@ One word of advice: Do not use `+` or `*` in your expression as this will try to
 
 Examples
 --------
+
+* scrunchre.py "abc?"
+
+```
+    ab
+    abc
+```
 
 * scrunchre.py "[A-z]{1,3}[0-9]{2}"
 
