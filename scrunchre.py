@@ -66,8 +66,6 @@ pattern_string = sys.argv[1]
 
 pattern = parse(pattern_string)
 
-print pattern
-
 iters = map(lambda x: re_iter(x), pattern)
 
 for i in itertools.product(*iters):
