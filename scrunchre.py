@@ -37,7 +37,10 @@ def maxrepeat_iter(spec):
 	# (0, 2, [('in', [('range', (97, 99))])])
 	min = spec[0]
 	max = spec[1]
-	speclist = spec_list(spec[2][0][1])
+	if spec[2][0][0] == IN:
+		speclist = spec_list(spec[2][0][1])
+	else:
+		speclist = spec_list(spec[2])
 	rng = range(min, max+1)
 	iters = map(lambda x: itertools.product(speclist, repeat = x), rng)
 	for it in iters:
@@ -62,6 +65,8 @@ if len(sys.argv) < 2:
 pattern_string = sys.argv[1]
 
 pattern = parse(pattern_string)
+
+print pattern
 
 iters = map(lambda x: re_iter(x), pattern)
 
